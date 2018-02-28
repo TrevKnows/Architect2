@@ -13,6 +13,7 @@
 		D59BEF8C2046E445005CB94D /* Architect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D59BEF8A2046E445005CB94D /* Architect.xcdatamodeld */; };
 		D59BEF8E2046E445005CB94D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D59BEF8D2046E445005CB94D /* Assets.xcassets */; };
 		D59BEF912046E445005CB94D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59BEF8F2046E445005CB94D /* LaunchScreen.storyboard */; };
+		D59BEF99204703E2005CB94D /* ArchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59BEF98204703E2005CB94D /* ArchData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D59BEF8D2046E445005CB94D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D59BEF902046E445005CB94D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D59BEF922046E445005CB94D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D59BEF98204703E2005CB94D /* ArchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,47 @@
 			isa = PBXGroup;
 			children = (
 				D59BEF832046E445005CB94D /* AppDelegate.swift */,
-				D59BEF852046E445005CB94D /* ArchViewController.swift */,
-				D59BEF872046E445005CB94D /* Main.storyboard */,
-				D59BEF8D2046E445005CB94D /* Assets.xcassets */,
-				D59BEF8F2046E445005CB94D /* LaunchScreen.storyboard */,
+				D59BEF9B20470432005CB94D /* Controllers */,
+				D59BEF9A2047040B005CB94D /* Data Model */,
+				D59BEF9C20470445005CB94D /* Views */,
+				D59BEF9D2047047E005CB94D /* Supporting Files */,
 				D59BEF922046E445005CB94D /* Info.plist */,
 				D59BEF8A2046E445005CB94D /* Architect.xcdatamodeld */,
 			);
 			path = Architect;
+			sourceTree = "<group>";
+		};
+		D59BEF9A2047040B005CB94D /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				D59BEF98204703E2005CB94D /* ArchData.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		D59BEF9B20470432005CB94D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D59BEF852046E445005CB94D /* ArchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D59BEF9C20470445005CB94D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D59BEF872046E445005CB94D /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D59BEF9D2047047E005CB94D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D59BEF8D2046E445005CB94D /* Assets.xcassets */,
+				D59BEF8F2046E445005CB94D /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D59BEF862046E445005CB94D /* ArchViewController.swift in Sources */,
+				D59BEF99204703E2005CB94D /* ArchData.swift in Sources */,
 				D59BEF8C2046E445005CB94D /* Architect.xcdatamodeld in Sources */,
 				D59BEF842046E445005CB94D /* AppDelegate.swift in Sources */,
 			);

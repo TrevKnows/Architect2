@@ -10,11 +10,19 @@ import UIKit
 
 class ArchViewController: UITableViewController {
   
-  var itemArray = ["A","B"]
- 
+  var itemArray = ["Item 1"]
+  
+  let defaults = UserDefaults.standard
+  
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    //let newNote = ArchData()
+    if let items = defaults.array(forKey: "TodoListArray") as? [String] {
+      itemArray = items
+    }
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,19 +41,16 @@ class ArchViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     //print(itemArray[indexPath.row])
     
-    
-    
     if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
       tableView.cellForRow(at: indexPath)?.accessoryType = .none
     } else {
       tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
     }
-    
-    
     tableView.deselectRow(at: indexPath, animated: true)
-    
-
   }
+  //Pragma Mark :- Button actions
+  
+  
   
   @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
     
@@ -54,20 +59,16 @@ class ArchViewController: UITableViewController {
     let alert =  UIAlertController(title: "New Architect Note", message: "", preferredStyle: .alert)
     
     let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-      //What will happen once the user clicks the Add Item button
-
+      
       self.itemArray.append(textField.text!)
       
+      self.defaults.set(self.itemArray, forKey: "TodoListArray")
+      
       self.tableView.reloadData()
-
-      
-    }
+  }
     
-    alert.addTextField { (alertTextField) in
-      alertTextField.placeholder = "Create new item"
+    alert.addTextField { (alertTextField) in alertTextField.placeholder = "Create new item"
       textField = alertTextField
-      
-      
     }
     
     
@@ -78,6 +79,45 @@ class ArchViewController: UITableViewController {
     
     
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
 }
